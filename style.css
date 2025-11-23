@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') center/cover no-repeat fixed;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(3px);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+    from { opacity:0; transform: translateY(-20px); }
+    to { opacity:1; transform: translateY(0); }
+}
+
+.msg {
+    margin: 20px auto;
+    width: 80%;
+    font-size: 22px;
+    line-height: 1.5;
+    animation: pulseText 4s infinite ease-in-out;
+}
+
+@keyframes pulseText {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.btn {
+    background: #ffebf3;
+    color: #c40047;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
